@@ -60,8 +60,22 @@
 * deleteCar(carId: String) - метод для удаления информации об автомобиле
 ### Class SalonService
 * setFinish(carId: String, type: String, color: String, seatType: String) - метод  для установки отделки салона конкретного автомобиля
+### ___Database Layer___
+### Class Repository
 
+* databaseConnection: DatabaseConnection - объект класса DatabaseConnection для управления соединением с базой данных.
+* findById(id: String): Object - метод для поиска объекта по его идентификатору.
+* findAll(): List\<Object> - метод для получения списка всех объектов в базе данных.
+* findByCriteria(criteria: String): List\<Object> - метод для поиска объектов по определенным критериям.
+* save(object: Object): Boolean - метод для сохранения объекта в базе данных.
+* update(object: Object): Boolean - метод для обновления объекта в базе данных.
+* delete(object: Object): Boolean - метод для удаления объекта из базы данных.
 
+### Class DatabaseConnection
 
-
+* url: String - строка для хранения URL-адреса базы данных.
+* username: String - строка для хранения имени пользователя базы данных.
+* password: String - строка для хранения пароля для доступа к базе данных.
+* connect() - метод для установления соединения с базой данных.
+* disconnect() - метод для закрытия соединения с базой данных.
 
